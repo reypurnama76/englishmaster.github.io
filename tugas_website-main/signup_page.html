@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up Page</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    .half-width {
+      width: 100%;
+    }
+    @media (min-width: 768px) {
+      .half-width {
+        width: 50%;
+      }
+    }
+    .icon-eye {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      cursor: pointer;
+    }
+    .icon-book{
+      width: 128px;
+    }
+  </style>
+</head>
+<body class="flex justify-center items-center min-h-screen bg-gray-100">
+  <div class="bg-white flex flex-col md:flex-row shadow-lg rounded-lg overflow-hidden">
+    <div class="half-width p-8">
+      <h2 class="text-2xl font-bold text-gray-800 mb-6">Create your Account</h2>
+      <p class="text-gray-600 mb-4">Join us by creating an account:</p>
+      <div class="flex flex-col gap-4 mb-4">
+        <button id="google-signup" class="flex-1 py-2 px-4 border rounded-lg flex items-center justify-center text-gray-700 hover:bg-gray-100">
+          <img src="https://img.icons8.com/color/16/000000/google-logo.png" class="mr-2" alt="Google logo"> Google
+        </button>
+        <button id="facebook-signup" class="flex-1 py-2 px-4 border rounded-lg flex items-center justify-center text-gray-700 hover:bg-gray-100">
+          <img src="https://img.icons8.com/color/16/000000/facebook-new.png" class="mr-2" alt="Facebook logo"> Facebook
+        </button>
+      </div>
+      <form id="signup-form">
+        <div class="mb-4">
+          <label class="block text-gray-600 mb-2" for="email">Email</label>
+          <input class="w-full p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" type="email" id="email" placeholder="Email" required>
+        </div>
+        <div class="mb-4 relative">
+          <label class="block text-gray-600 mb-2" for="password">Password</label>
+          <input class="w-full p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" type="password" id="password" placeholder="Password" required>
+          <span id="toggle-password" class="icon-eye">
+            <img src="https://img.icons8.com/ios-filled/24/000000/visible.png" alt="Show Password">
+          </span>
+        </div>
+        <div class="mb-4 relative">
+          <label class="block text-gray-600 mb-2" for="confirm-password">Confirm Password</label>
+          <input class="w-full p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" type="password" id="confirm-password" placeholder="Confirm Password" required>
+          <span id="toggle-confirm-password" class="icon-eye">
+            <img src="https://img.icons8.com/ios-filled/24/000000/visible.png" alt="Show Password">
+          </span>
+        </div>
+        <button type="submit" class="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600">Sign Up</button>
+      </form>
+      <p class="mt-4 text-center text-gray-600">Already have an account? <a href="login_page.html" class="text-blue-500 hover:underline">Log in</a></p>
+    </div>
+    <div class="half-width bg-blue-500 flex items-center justify-center text-white p-8">
+      <div class="text-center">
+        <img src="img/icons8-book-64.png" class="mx-auto mb-4 icon-book" alt="Book Icon">
+        <h2 class="text-2xl font-bold">Connect with every application.</h2>
+        <p class="mt-2">Everything you need in an easily customizable dashboard.</p>
+      </div>
+    </div>
+  </div>
+  <script>
+    document.getElementById('google-signup').addEventListener('click', function() {
+  alert('Google signup clicked');
+});
+
+document.getElementById('facebook-signup').addEventListener('click', function() {
+  alert('Facebook signup clicked');
+});
+
+document.getElementById('signup-form').addEventListener('submit', function(event) {
+  event.preventDefault(); // Prevent form submission
+  const email = document.getElementById('email').value;
+  const password = document.getElementById('password').value;
+  const confirmPassword = document.getElementById('confirm-password').value;
+
+  if (password !== confirmPassword) {
+    alert('Passwords do not match');
+    return;
+  }
+
+  // Perform signup logic here
+  alert(`Email: ${email}\nPassword: ${password}`);
+});
+
+const togglePassword = document.getElementById('toggle-password');
+const passwordField = document.getElementById('password');
+
+togglePassword.addEventListener('click', function() {
+  const type = passwordField.getAttribute('type') === 'password' ? 'text' : 'password';
+  passwordField.setAttribute('type', type);
+
+  this.querySelector('img').src = type === 'password'
+    ? 'https://img.icons8.com/ios-filled/24/000000/visible.png'
+    : 'https://img.icons8.com/ios-filled/24/000000/invisible.png';
+});
+
+const toggleConfirmPassword = document.getElementById('toggle-confirm-password');
+const confirmPasswordField = document.getElementById('confirm-password');
+
+toggleConfirmPassword.addEventListener('click', function() {
+  const type = confirmPasswordField.getAttribute('type') === 'password' ? 'text' : 'password';
+  confirmPasswordField.setAttribute('type', type);
+
+  this.querySelector('img').src = type === 'password'
+    ? 'https://img.icons8.com/ios-filled/24/000000/visible.png'
+    : 'https://img.icons8.com/ios-filled/24/000000/invisible.png';
+});
+  </script>
+</body>
+</html>
+
+
+<!-- Script Javascript -->
+
+
+

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English Master</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        .input-email {
+            padding: 0.75rem 1.5rem;
+            border-radius: 9999px;
+            border: 1px solid #e5e7eb;
+        }
+        .nav-link:hover{
+            border-bottom: 1px solid white;
+        }
+        .start-button:hover{
+            background-color:#007bff;
+            color: white;
+            border: none;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+        .learn-more{
+            width: 30px;
+            height: 10px;
+            background-color: #007bff;
+            color: white;
+        }
+        .learn-more:hover{
+            background-color: white;
+            color: black;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+        .get-started:hover{
+            background-color: white;
+            color: black;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+        .img-guide{
+            height: 1500px;
+            width: 500px;
+        }
+        .btn-custom {
+            padding: 0.75rem 2rem;
+            border-radius: 9999px;
+            font-size: 1rem;
+        }
+        .btn-login, .btn-signup {
+            padding: 0.5rem 1rem;
+            border-radius: 9999px;
+            font-size: 1rem;
+            border: 2px solid white;
+            background-color: transparent;
+        }
+
+        .img-about-us{
+            width: 100%;
+            height: 600px;
+            object-fit: cover;
+            object-position: center;
+        }
+        .img-join{
+            background-image: url(img/about-us2.png);
+            width: 100%;
+            height: 400px;
+            background-position:center ;
+        }
+        .btn-login:hover, .btn-signup:hover {
+            background-color: white;
+            color: blue;
+        }
+        .footer-link:hover{
+            border-bottom: 1px solid white;
+        }
+        .vision-section{
+            margin-top: 50px;
+        }
+        .join-section{
+            text-align: center;
+            margin-top: 10%;
+        }
+        
+        .social-icons a {
+            color: white;
+            font-size: 1.5rem;
+            margin: 0 0.5rem;
+            transition: color 0.3s;
+        }
+        .social-icons a:hover { 
+            color: #1DA1F2;
+        }
+        #scrollToTopBtn {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: #007bff;
+            color: white;
+            text-align: center;
+            line-height: 50px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900">
+
+    <!-- Navbar -->
+    <nav class="bg-blue-600 shadow-md py-4">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <a href="index.html" class="text-xl font-bold text-white">English Master</a>
+            <div class="flex items-center">
+                <a href="aboutus.html" class="text-white mx-2 nav-link">About Us</a>
+                <a href="#guide-lesson" class="text-white mx-2 nav-link">Guided Lessons</a>
+                <a href="#how-it-works" class="text-white mx-2 nav-link">How it Works</a>
+                <a href="#" class="text-white mx-2 nav-link">Contact Us</a>
+                <a href="login_page.html" class="bg-transparent text-white px-4 py-2 rounded-full mx-2 btn-login">Log In</a>
+                <a href="signup_page.html" class="bg-transparent text-white px-4 py-2 rounded-full mx-2 btn-signup">Sign Up</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- About Section -->
+    <section>
+        <div class="container mx-auto text-center px-4 md:px-0">
+            <img src="img/about-us.png" alt="Child reading a book" class="mx-auto mb-8 rounded-lg shadow-lg img-about-us">
+            <h2 class="text-3xl font-bold mb-4">About English Master</h2>
+            <p class="text-gray-600 max-w-2xl mx-auto">English Master is dedicated to delivering innovative and comprehensive language learning solutions, meticulously designed to cater to the unique needs of learners at all proficiency levels. Our programs are crafted by experienced educators and incorporate the latest technology to ensure an engaging and effective learning experience.
+            </p>
+        </div>
+    </section>
+
+    <!-- Vision Section -->
+    <section class="bg-gray-100 py-16 vision-section">
+        <div class="container mx-auto text-center px-4 md:px-0 ">
+            <h2 class="text-3xl font-bold mb-4">Our Vision</h2>
+            <p class="text-gray-600 max-w-2xl mx-auto">Our vision is to empower individuals around the globe to achieve fluency in English, thereby unlocking new personal and professional opportunities. We aim to foster a community of confident English speakers who can connect, collaborate, and thrive in an increasingly interconnected world.</p>
+        </div>
+    </section>
+
+    <!-- Join Section -->
+    <section class="bg-blue-700 text-white py-16 img-join">
+        <div class="container mx-auto text-center px-4 md:px-0 join-section">
+            <h2 class="text-3xl mb-4">Join us on the road to English mastery.</h2>
+            <a href="#" class="btn-secondary py-2 px-8 rounded-full transition learn-more">Join</a>
+        </div>
+    </section>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTopBtn" class="fixed bottom-4 right-4 bg-blue-600 text-white p-0 rounded-full shadow-lg hidden">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2024 English Master. All rights reserved.</p>
+            <div class="mt-4">
+                <a href="#" class="mx-2 footer-link">About Us</a>
+                <a href="#" class="mx-2 footer-link">Guided Lessons</a>
+                <a href="#" class="mx-2 footer-link">How it Works</a>
+                <a href="#" class="mx-2 footer-link">Pricing</a>
+                <a href="#" class="mx-2 footer-link">Contact Us</a>
+            </div>
+            <div class="mt-4 social-icons">
+                <a href="https://www.instagram.com/yourprofile" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.facebook.com/yourprofile" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.twitter.com/yourprofile" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Get the button
+        let scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                scrollToTopBtn.style.display = "block";
+            } else {
+                scrollToTopBtn.style.display = "none";
+            }
+        };
+
+        // When the user clicks on the button, scroll to the top of the document
+        scrollToTopBtn.onclick = function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        };
+    </script>
+
+</body>
+</html>
